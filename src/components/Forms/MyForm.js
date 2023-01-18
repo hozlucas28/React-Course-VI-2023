@@ -1,3 +1,5 @@
+import { memo } from 'react';
+
 import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 import Input from '../Input';
@@ -13,12 +15,12 @@ const MyForm = ({ onSubmit }) => {
 		<Formik
 			initialValues={{
 				name: '',
-				lastname: ''
+				lastName: ''
 			}}
 			onSubmit={handleSubmit}
 			validationSchema={Yup.object({
 				name: Yup.string().required('Obligatorio'),
-				lastname: Yup.string().required('Obligatorio')
+				lastName: Yup.string().required('Obligatorio')
 			})}
 		>
 			<Form>
@@ -27,7 +29,7 @@ const MyForm = ({ onSubmit }) => {
 					label="Nombre"
 				/>
 				<Input
-					name="lastname"
+					name="lastName"
 					label="Apellido"
 				/>
 				<button type="submit">Enviar</button>
@@ -36,4 +38,4 @@ const MyForm = ({ onSubmit }) => {
 	);
 };
 
-export default MyForm;
+export default memo(MyForm);
