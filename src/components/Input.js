@@ -1,5 +1,6 @@
-import styled from 'styled-components';
 import { useField } from 'formik';
+
+import styled from 'styled-components';
 
 const Control = styled.div`
 	margin-bottom: 20px;
@@ -26,6 +27,7 @@ const ErrorMessage = styled.div`
 
 const Input = ({ label, ...props }) => {
 	const [field, meta] = useField(props);
+
 	return (
 		<Control>
 			<Label>{label}</Label>

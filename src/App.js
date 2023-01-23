@@ -1,3 +1,21 @@
+/* --------------------------------------------------------------------------
+ * APUNTES:
+ * 		   En este archivo se demuestra la importancia de optimizar
+ * 		   componentes y funciones. Sin embargo, estos deben ser optimizados
+ * 		   cuando realmente observamos un mal rendimiento, debido a que agregan
+ * 		   complejidad al código.
+ *
+ *
+ * IMPORTANTE:
+ *  			  - <useMemo> = Me permite memorizar un componente, es decir,
+ * 								una vez que es renderizado por primera vez las
+ * 								próximas veces se renderiza más rápido.
+ *  			  - <useCallback> = Me permite memorizar una función, es decir,
+ * 									una vez que es creada por primera vez esta
+ * 									no se vuelve a generar. Se recomienda
+ * 									utilizarla en funciones no dinámicas.
+-------------------------------------------------------------------------- */
+
 import { useState, useCallback, useMemo } from 'react';
 
 import Title from './components/Title';

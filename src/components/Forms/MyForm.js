@@ -1,7 +1,17 @@
+/* --------------------------------------------------------------------------
+ * APUNTES:
+ * 		   En este archivo se demuestra como validar campos mediante el uso
+ * 		   del paquete 'yup'.
+ *
+ *
+ * MÁS EJEMPLOS: https://github.com/hozlucas28/React-Interest-Calculator-Practice-2023/blob/Master/src/App.js#L51
+-------------------------------------------------------------------------- */
+
 import { memo } from 'react';
 
 import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
+
 import Input from '../Input';
 
 const MyForm = ({ onSubmit }) => {
